@@ -1,0 +1,30 @@
+body {
+  background: #f06d06;
+  margin: 20px 0;
+  padding: 10px;
+}
+.wrapper {
+  text-align: center;
+}
+.lead-to-data {
+  width: 20vw;
+  height: 25vh;
+  display: inline-block;
+  background-color: aqua;
+}
+#myTablePlaceholder {
+  margin-top: 3vh;
+  color: aqua;
+  vertical-align: middle;
+}
+
+p a {
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 1.1em;
+  text-transform: uppercase;
+}
+table{
+  border-collapse: collapse;
+  border: 3px dashed white;
+}
