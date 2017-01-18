@@ -28,14 +28,29 @@
             var table = document.createElement('TABLE');
             //create a thead
             let thead = document.createElement('THEAD');
-            table.appendChild(th);
-            var tbdy = document.createElement('TBODY');
+            table.appendChild(thead);
+            //create a th
+            let th = document.createElement('TH');
+            //add th to the thead
+            thead.appendChild(th);
+            let tbdy = document.createElement('TBODY');
             table.appendChild(tbdy);
 
+            //add the title table in each row
+            let name = ['Raison Sociale', 'Sous-type', 'Code postal', 'Ville', 'Latitude', 'Longitude'];
+            for (i = 0; i < name.length; i++) {
+                //create a td
+                let td = document.createElement('TD');
+                //create a text with an array
+                document.getElementsByTagName('TD');
+                let addTitle = document.createTextNode(name[i]);
+                th.appendChild(td);
+                td.appendChild(addTitle);
+            }
 
             //for each row in the table add the cell contents
-            for (var i = 1; i < data.d.length; i++) {
-                var tr = document.createElement('TR');
+            for (let i = 1; i < data.d.length; i++) {
+                let tr = document.createElement('TR');
                 tbdy.appendChild(tr);
                 tr.appendChild(AddCellContents(data.d, i, 'raisonsociale'));
                 tr.appendChild(AddCellContents(data.d, i, 'soustype'));
@@ -47,7 +62,6 @@
             //add the table to page
             placeholder.appendChild(table);
         }
-
         //add cell contents to the table
         function AddCellContents(data, cell, id) {
             var td = document.createElement('TD');
@@ -55,14 +69,13 @@
             td.appendChild(document.createTextNode(dataCell));
             return td;
         }
-
-        //add cell contents to the thead
+        //add cell contents after the th
         function addCellThead(data, cell, id) {
-            let thead = 
-            var tr = document.createElement('TR');
-            th.appendChild(tr);
-
+            let title = document.createTextNode(data);
+            let row = document.getElementBy
         }
+
+
         $(document).ready(function() {
             $('#dataLoading').on("click", function(event) {
                 LoadAdditionalData();
