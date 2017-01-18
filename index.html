@@ -29,37 +29,38 @@
             //create a thead
             let thead = document.createElement('THEAD');
             table.appendChild(thead);
-            //create a th
-            let th = document.createElement('TH');
-            //add th to the thead
-            thead.appendChild(th);
+            //create a tr
+            let tr = document.createElement('TR');
+            thead.appendChild(tr);
             let tbdy = document.createElement('TBODY');
             table.appendChild(tbdy);
 
             //add the title table in each row
             let name = ['Raison Sociale', 'Sous-type', 'Code postal', 'Ville', 'Latitude', 'Longitude'];
             for (i = 0; i < name.length; i++) {
-                //create a td
-                let td = document.createElement('TD');
+              //create a th
+              let th = document.createElement('TH');
+              //add th to the thead
+              tr.appendChild(th);
                 //create a text with an array
-                document.getElementsByTagName('TD');
+                document.getElementsByTagName('TH');
                 let addTitle = document.createTextNode(name[i]);
-                th.appendChild(td);
-                td.appendChild(addTitle);
-            }
-
-            //for each row in the table add the cell contents
-            for (let i = 1; i < data.d.length; i++) {
-                let tr = document.createElement('TR');
-                tbdy.appendChild(tr);
-                tr.appendChild(AddCellContents(data.d, i, 'raisonsociale'));
-                tr.appendChild(AddCellContents(data.d, i, 'soustype'));
-                tr.appendChild(AddCellContents(data.d, i, 'codepostal'));
-                tr.appendChild(AddCellContents(data.d, i, 'ville'));
-                tr.appendChild(AddCellContents(data.d, i, 'latitude'));
-                tr.appendChild(AddCellContents(data.d, i, 'longitude'));
+                tr.appendChild(th);
+                th.appendChild(addTitle);
+                //for each row in the table add the cell contents
+                for (let i = 1; i < data.d.length; i++) {
+                    let tr = document.createElement('TR');
+                    tbdy.appendChild(tr);
+                    tr.appendChild(AddCellContents(data.d, i, 'raisonsociale'));
+                    tr.appendChild(AddCellContents(data.d, i, 'soustype'));
+                    tr.appendChild(AddCellContents(data.d, i, 'codepostal'));
+                    tr.appendChild(AddCellContents(data.d, i, 'ville'));
+                    tr.appendChild(AddCellContents(data.d, i, 'latitude'));
+                    tr.appendChild(AddCellContents(data.d, i, 'longitude'));
+                }
             }
             //add the table to page
+
             placeholder.appendChild(table);
         }
         //add cell contents to the table

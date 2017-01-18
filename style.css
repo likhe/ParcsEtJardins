@@ -15,16 +15,7 @@ body {
 #myTablePlaceholder {
   margin-top: 3vh;
   color: aqua;
-  vertical-align: middle;
 }
-
-p a {
-  vertical-align: middle;
-  text-decoration: none;
-  font-size: 1.1em;
-  text-transform: uppercase;
-}
-table{
-  border-collapse: collapse;
-  border: 3px dashed white;
+table, thead, th, td {
+   border: 1px solid black;
 }
